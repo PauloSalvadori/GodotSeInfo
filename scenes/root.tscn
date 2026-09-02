@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cfjh6ob4eec8o"]
+
+[ext_resource type="PackedScene" uid="uid://c6ngy80i60155" path="res://scenes/player.tscn" id="1_j5px3"]
+[ext_resource type="PackedScene" uid="uid://20e8yxg6l00t" path="res://scenes/ladder.tscn" id="1_twpsu"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wej0m"]
+
+[node name="root" type="Node2D" unique_id=2066271497]
+
+[node name="Ladder" parent="." unique_id=1081310481 instance=ExtResource("1_twpsu")]
+position = Vector2(211, 99.000015)
+
+[node name="player" parent="." unique_id=1701590063 instance=ExtResource("1_j5px3")]
+top_level = true
+position = Vector2(86, 117)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1525369148]
+position = Vector2(120, -45)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=156577616]
+position = Vector2(-10, 204)
+shape = SubResource("WorldBoundaryShape2D_wej0m")
