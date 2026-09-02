@@ -1,5 +1,7 @@
 class_name Dash extends State
 
+@onready var animation_player: AnimatedSprite2D = $AnimatedSprite2D
+
 func enter() -> void:
 	var movement := player.movement_component
 	var input := player.input_component

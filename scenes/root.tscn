@@ -2,21 +2,77 @@
 
 [ext_resource type="PackedScene" uid="uid://c6ngy80i60155" path="res://scenes/player.tscn" id="1_j5px3"]
 [ext_resource type="PackedScene" uid="uid://20e8yxg6l00t" path="res://scenes/ladder.tscn" id="1_twpsu"]
+[ext_resource type="Texture2D" uid="uid://cidgla3oqkmoa" path="res://Assets/MountainsLayers/sky.png" id="3_lrqlo"]
+[ext_resource type="Texture2D" uid="uid://bbw3l7ns3qacb" path="res://Assets/MountainsLayers/far-clouds.png" id="4_sqa0i"]
+[ext_resource type="Texture2D" uid="uid://nei8g3fblyr7" path="res://Assets/MountainsLayers/near-clouds.png" id="5_jh1ax"]
+[ext_resource type="Texture2D" uid="uid://bcnsdxg457gf4" path="res://Assets/MountainsLayers/far-mountains.png" id="6_j287u"]
+[ext_resource type="Texture2D" uid="uid://dxjs1s2ge2yl0" path="res://Assets/MountainsLayers/trees.png" id="7_5sfjl"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wej0m"]
 
 [node name="root" type="Node2D" unique_id=2066271497]
 
 [node name="Ladder" parent="." unique_id=1081310481 instance=ExtResource("1_twpsu")]
-position = Vector2(211, 99.000015)
+position = Vector2(211, 122)
 
 [node name="player" parent="." unique_id=1701590063 instance=ExtResource("1_j5px3")]
 top_level = true
 position = Vector2(86, 117)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1525369148]
-position = Vector2(120, -45)
+position = Vector2(151, -25)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=156577616]
 position = Vector2(-10, 204)
 shape = SubResource("WorldBoundaryShape2D_wej0m")
+
+[node name="Background" type="Node2D" parent="." unique_id=2091682143]
+z_index = -1024
+
+[node name="Parallax2D" type="Parallax2D" parent="Background" unique_id=1172217331]
+scroll_scale = Vector2(0, 0.01)
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D" unique_id=2011958411]
+texture_filter = 1
+position = Vector2(160, 106)
+texture = ExtResource("3_lrqlo")
+
+[node name="Parallax2D2" type="Parallax2D" parent="Background" unique_id=1896416833]
+scroll_scale = Vector2(0.02, 0.01)
+repeat_size = Vector2(128, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D2" unique_id=1710825575]
+texture_filter = 1
+position = Vector2(164, 87)
+texture = ExtResource("4_sqa0i")
+
+[node name="Parallax2D3" type="Parallax2D" parent="Background" unique_id=1974415217]
+scroll_scale = Vector2(0.03, 0.01)
+repeat_size = Vector2(144, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D3" unique_id=1504840338]
+texture_filter = 1
+position = Vector2(165, 83)
+texture = ExtResource("5_jh1ax")
+
+[node name="Parallax2D5" type="Parallax2D" parent="Background" unique_id=1118780990]
+scroll_scale = Vector2(0.05, 0.01)
+repeat_size = Vector2(144, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D5" unique_id=672473309]
+texture_filter = 1
+position = Vector2(161, 75)
+texture = ExtResource("6_j287u")
+
+[node name="Parallax2D4" type="Parallax2D" parent="Background" unique_id=991193530]
+scroll_scale = Vector2(0.07, 0.01)
+repeat_size = Vector2(164, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D4" unique_id=1615234871]
+texture_filter = 1
+position = Vector2(170, 65)
+texture = ExtResource("7_5sfjl")

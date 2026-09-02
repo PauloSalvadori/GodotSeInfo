@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://20e8yxg6l00t"]
 
 [ext_resource type="Script" uid="uid://blea71b45ebht" path="res://scrips/ClimbableComponent.gd" id="1_xxwne"]
+[ext_resource type="Texture2D" uid="uid://bcgmludxqb7qj" path="res://Assets/cs70go7td1tf1.jpeg" id="2_xb1tl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wej0m"]
 size = Vector2(20, 66)
 
-[sub_resource type="QuadMesh" id="QuadMesh_wej0m"]
+[sub_resource type="QuadMesh" id="QuadMesh_jh1ax"]
 
 [node name="Ladder" type="Node2D" unique_id=1081310481]
 
@@ -18,7 +19,8 @@ position = Vector2(0, 23)
 shape = SubResource("RectangleShape2D_wej0m")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="ClimbableComponent" unique_id=775408441]
-modulate = Color(4.5724214e-06, 0.64158744, 0.3165069, 1)
 position = Vector2(0, 22.999996)
+rotation = 3.1415927
 scale = Vector2(20, 65.99999)
-mesh = SubResource("QuadMesh_wej0m")
+mesh = SubResource("QuadMesh_jh1ax")
+texture = ExtResource("2_xb1tl")

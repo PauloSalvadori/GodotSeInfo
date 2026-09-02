@@ -16,14 +16,6 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wej0m"]
 size = Vector2(13, 19)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_u2ulf"]
-atlas = ExtResource("12_jej6c")
-region = Rect2(0, 160, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6e8lb"]
-atlas = ExtResource("12_jej6c")
-region = Rect2(32, 160, 32, 32)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_2gdjj"]
 atlas = ExtResource("12_jej6c")
 region = Rect2(64, 160, 32, 32)
@@ -200,12 +192,6 @@ region = Rect2(224, 96, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_u2ulf")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6e8lb")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_2gdjj")
 }, {
 "duration": 1.0,
@@ -225,7 +211,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"dash",
-"speed": 20.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -383,6 +369,7 @@ script = ExtResource("4_dqkch")
 body = NodePath("..")
 model = NodePath("../MeshInstance2D")
 speed = 100.0
+gravity_multiplier = 2.5
 jump_force = 500.0
 dash_force = 600.0
 metadata/_custom_type_script = "uid://42ga3xgk5o46"
@@ -426,11 +413,10 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_wej0m")
 animation = &"dash"
 autoplay = "idle"
-frame = 5
-frame_progress = 0.95100415
+frame_progress = 0.70886457
 
 [node name="cameraAnchor" type="Node2D" parent="." unique_id=1661040216]
 position = Vector2(-160, -89)
 
 [node name="Camera2D" type="Camera2D" parent="cameraAnchor" unique_id=843311089]
-position = Vector2(161, 89)
+position = Vector2(162, 57)
